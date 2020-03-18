@@ -8,10 +8,10 @@ path = os.getcwd()
 with open('Models/logistic_model.pkl', 'rb') as f:
     logistic = pickle.load(f)
 
-with open('Models/dt_upload.pkl', 'rb') as f:
+with open('Models/RF_model.pkl', 'rb') as f:
     randomforest = pickle.load(f)
 
-with open('Models/svm_clf_model.pkl', 'rb') as f:
+with open('Models/svm_upload.pkl', 'rb') as f:
     svm_model = pickle.load(f)
 
 
