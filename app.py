@@ -15,11 +15,9 @@ with open('Models/svm_clf_model.pkl', 'rb') as f:
     svm_model = pickle.load(f)
 
 
-def get_predictions(age, sex, cp, trestbps, chol, fbs, restecg, thalach,
-       exang, oldpeak, slope, ca, thal, req_model):
+def get_predictions(age, sex, cp, trestbps, chol, fbs, restecg, thalach,exang, oldpeak, slope, ca, thal, req_model):
     
-    mylist = [age, sex, cp, trestbps, chol, fbs, restecg, thalach,
-       exang, oldpeak, slope, ca, thal]
+    mylist = [age, sex, cp, trestbps, chol, fbs, restecg, thalach,exang, oldpeak, slope, ca, thal]
     mylist = [float(i) for i in mylist]
     vals = [mylist]
 
@@ -60,8 +58,7 @@ def my_form_post():
     ca = request.form['ca'] 
     thal = request.form['thal'] 
 
-    target = get_predictions(age, sex, cp, trestbps, chol, fbs, restecg, thalach,
-       exang, oldpeak, slope, ca, thal, req_model)
+    target = get_predictions(age, sex, cp, trestbps, chol, fbs, restecg, thalach,exang, oldpeak, slope, ca, thal, req_model)
 
     if target==1:
         sale_making = 'You are going to die'
